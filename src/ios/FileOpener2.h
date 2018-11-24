@@ -1,3 +1,4 @@
+/*
 The MIT License (MIT)
 
 Copyright (c) 2013 pwlin - pwlin05@gmail.com
@@ -18,3 +19,17 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+#import <Cordova/CDV.h>
+
+@interface FileOpener2 : CDVPlugin <UIDocumentInteractionControllerDelegate> {
+    NSString *localFile;
+}
+
+@property(nonatomic, strong) UIDocumentInteractionController *controller;
+@property(nonatomic, strong) CDVViewController *cdvViewController;
+
+- (void) open: (CDVInvokedUrlCommand*)command;
+
+@end
